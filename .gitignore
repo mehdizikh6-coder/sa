@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+*.log
+players.json.tmp
+settings.json.tmp

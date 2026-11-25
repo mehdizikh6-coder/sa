@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: statement-telegram-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: CHANNEL_ID
+        value: ""
+      - key: PYTHON_VERSION
+        value: 3.11.11
